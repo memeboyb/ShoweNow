@@ -3,8 +3,8 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-                android:background="@drawable/main_header_selector">
-
+                android:background="@drawable/main_header_selector"
+                android:weightSum="1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,13 +12,29 @@
         android:weightSum="1"
         android:layout_marginBottom="-10dp"
         android:gravity="bottom">
-`
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:text="Back"
             style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/back1"
+            android:id="@+id/previousPage_c"
+
+            android:layout_toEndOf="@+id/textView"
+            android:textSize="22sp"
+            android:backgroundTint="#4a81ff"
+            android:layout_marginTop="8dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.5"/>
+    <!--android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"-->
+       <!-- <Button
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Next"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/nextPage_c"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/textView"
@@ -28,13 +44,25 @@
             android:textColor="#ffffff"
             android:layout_gravity="bottom"
             android:layout_weight="0.5"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/nextPage_c"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.5"/>
+        -->
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:text="Next"
             style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/next1"
+            android:id="@+id/nextPage_c"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/textView"
@@ -44,7 +72,6 @@
             android:textColor="#ffffff"
             android:layout_gravity="bottom"
             android:layout_weight="0.5"/>
-
-    </LinearLayout>
+   </LinearLayout>
 
 </LinearLayout>

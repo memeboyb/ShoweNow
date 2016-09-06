@@ -17,6 +17,9 @@
         <activity android:name=".SignupActivity">
         </activity>
 
+        <activity android:name=".ShowerActivity">
+        </activity>
+
         <activity android:name=".LoginActivity"
             android:windowSoftInputMode="adjustPan"
             >

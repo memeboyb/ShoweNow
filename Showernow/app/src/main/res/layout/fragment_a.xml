@@ -20,13 +20,13 @@
             android:layout_height="70dp"
             android:text="Next"
             style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/next1"
+            android:id="@+id/nextPage_a"
             android:textSize="22sp"
             android:backgroundTint="#4a81ff"
             android:layout_marginTop="8dp"
             android:textColor="#ffffff"
             android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true" />
+            android:layout_alignParentBottom="true"/>
             <!--
             android:layout_gravity="bottom|right"
             android:layout_alignParentBottom="true"
