@@ -11,7 +11,6 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 
 import butterknife.ButterKnife;
 
@@ -25,15 +24,14 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mViewPager = (ViewPager)findViewById(R.id.pager);
-
+        mViewPager = (CustomViewPager)findViewById(R.id.pager);
 
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         mViewPager.setAdapter(new MyAdapter(fragmentManager));
 
-        final View touchView = findViewById(R.id.pager);
+        /*final View touchView = findViewById(R.id.pager);
         touchView.setOnTouchListener(new View.OnTouchListener()
         {
             @Override
@@ -41,10 +39,16 @@ public class MainActivity extends AppCompatActivity{
             {
                 return true;
             }
-        });
+        });*/
 
 
+    }
+    public void setNextPage(){
+        mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1, true);
+    }
 
+    public void setPreviousPage(){
+        mViewPager.setCurrentItem(mViewPager.getCurrentItem()-1, true);
     }
 
 }
@@ -88,18 +92,12 @@ class MyAdapter extends FragmentPagerAdapter {
     }
 }
 
- class CustomViewPager extends ViewPager {
+class CustomViewPager extends ViewPager {
     private boolean enabled;
-
-     public void nextFragment(){
-         setCurrentItem(2);
-         return;
-     }
-
 
      public CustomViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.enabled = true;
+        this.enabled = false;
     }
 
     @Override
