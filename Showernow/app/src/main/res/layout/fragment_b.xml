@@ -71,66 +71,125 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_header_selector">
 
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1"
-        android:layout_marginBottom="-10dp"
-        android:gravity="bottom">
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_marginBottom="-10dp"
+            android:gravity="bottom">
+
+            <RadioGroup android:id="@+id/radio_group_gender"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="376dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <RadioButton android:id="@+id/radio_male"
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.10"
+                    android:textSize="18sp"/>
+
+                <RadioButton android:id="@+id/radio_female"
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.10"
+                    android:textSize="18sp"/>
+
+                <RadioButton android:id="@+id/radio_other"
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.10"
+                    android:textSize="18sp"/>
+                    <!--android:onClick="onRadioButtonClicked"-->
+            </RadioGroup>
+
+            <!-- <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="New RadioButton"
+                android:id="@+id/radioButton"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.58" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="New RadioButton"
+                android:id="@+id/radioButton2"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5" /> -->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_marginBottom="-10dp"
+            android:gravity="bottom">
 
 
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:text="Back"
-            style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/previousPage_b"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/textView"
-            android:textSize="22sp"
-            android:backgroundTint="#4a81ff"
-            android:layout_marginTop="8dp"
-            android:textColor="#ffffff"
-            android:layout_gravity="bottom"
-            android:layout_weight="0.5" />
-
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:text="Back"
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/previousPage_b"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView"
+                android:textSize="22sp"
+                android:backgroundTint="#4a81ff"
+                android:layout_marginTop="8dp"
+                android:textColor="#ffffff"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.5" />
 
 
-        <Button
-             android:layout_width="wrap_content"
-             android:layout_height="70dp"
-             android:text="Next"
-             style="?android:attr/borderlessButtonStyle"
-             android:id="@+id/nextPage_b"
-             android:layout_alignParentBottom="true"
-             android:layout_alignParentEnd="true"
-             android:layout_toEndOf="@+id/textView"
-             android:textSize="22sp"
-             android:backgroundTint="#4a81ff"
-             android:layout_marginTop="8dp"
-             android:textColor="#ffffff"
-             android:layout_gravity="bottom"
-             android:layout_weight="0.5" />
+            <Button
+                 android:layout_width="wrap_content"
+                 android:layout_height="70dp"
+                 android:text="Next"
+                 style="?android:attr/borderlessButtonStyle"
+                 android:id="@+id/nextPage_b"
+                 android:layout_alignParentBottom="true"
+                 android:layout_alignParentEnd="true"
+                 android:layout_toEndOf="@+id/textView"
+                 android:textSize="22sp"
+                 android:backgroundTint="#4a81ff"
+                 android:layout_marginTop="8dp"
+                 android:textColor="#ffffff"
+                 android:layout_gravity="bottom"
+                 android:layout_weight="0.5" />
 
-       <!-- <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next"
-            style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/nextPage_c"
-            android:textSize="20sp"
-            android:layout_marginTop="8dp"
-            android:textColor="#ffffff"
-            android:layout_gravity="bottom"
-        android:layout_weight="0.5"/>
-        -->
+            <!-- <Button
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Next"
+                 style="?android:attr/borderlessButtonStyle"
+                 android:id="@+id/nextPage_c"
+                 android:textSize="20sp"
+                 android:layout_marginTop="8dp"
+                 android:textColor="#ffffff"
+                 android:layout_gravity="bottom"
+             android:layout_weight="0.5"/>
+             -->
 
 
 
     </LinearLayout>
 
-
+    </FrameLayout>
 </LinearLayout>

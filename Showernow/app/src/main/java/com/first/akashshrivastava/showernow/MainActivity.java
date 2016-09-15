@@ -17,6 +17,7 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity{
 
     ViewPager mViewPager = null;
+    public String gender = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +44,9 @@ public class MainActivity extends AppCompatActivity{
 
 
     }
-    public void setNextPage(){
-        mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1, true);
-    }
+    public void setNextPage(){mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1, true);}
 
-    public void setPreviousPage(){
-        mViewPager.setCurrentItem(mViewPager.getCurrentItem()-1, true);
-    }
+    public void setPreviousPage(){mViewPager.setCurrentItem(mViewPager.getCurrentItem()-1, true);}
 
 }
 
