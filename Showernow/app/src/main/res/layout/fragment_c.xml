@@ -5,73 +5,97 @@
               android:layout_height="match_parent"
                 android:background="@drawable/main_header_selector"
                 android:weightSum="1">
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1"
-        android:layout_marginBottom="-10dp"
-        android:gravity="bottom">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:text="Back"
-            style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/previousPage_c"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="56dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
 
-            android:layout_toEndOf="@+id/textView"
-            android:textSize="22sp"
-            android:backgroundTint="#4a81ff"
-            android:layout_marginTop="8dp"
-            android:textColor="#ffffff"
-            android:layout_gravity="bottom"
-            android:layout_weight="0.5"/>
-    <!--android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"-->
-       <!-- <Button
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:text="Next"
-            style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/nextPage_c"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/textView"
-            android:textSize="22sp"
-            android:backgroundTint="#4a81ff"
-            android:layout_marginTop="8dp"
-            android:textColor="#ffffff"
-            android:layout_gravity="bottom"
-            android:layout_weight="0.5"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next"
-            style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/nextPage_c"
-            android:textSize="20sp"
-            android:layout_marginTop="8dp"
-            android:textColor="#ffffff"
-            android:layout_gravity="bottom"
-            android:layout_weight="0.5"/>
-        -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/input_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:hint="weight(kg)" />
+            </android.support.design.widget.TextInputLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:text="Next"
-            style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/nextPage_c"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/textView"
-            android:textSize="22sp"
-            android:backgroundTint="#4a81ff"
-            android:layout_marginTop="8dp"
-            android:textColor="#ffffff"
-            android:layout_gravity="bottom"
-            android:layout_weight="0.5"/>
-   </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/input_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:hint="height(cm)" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/input_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:hint="age" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_marginBottom="-10dp"
+            android:gravity="bottom">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:text="Back"
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/previousPage_c"
+
+                android:layout_toEndOf="@+id/textView"
+                android:textSize="22sp"
+                android:backgroundTint="#4a81ff"
+                android:layout_marginTop="8dp"
+                android:textColor="#ffffff"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.5"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:text="Next"
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/nextPage_c"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView"
+                android:textSize="22sp"
+                android:backgroundTint="#4a81ff"
+                android:layout_marginTop="8dp"
+                android:textColor="#ffffff"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+
+    </FrameLayout>
 
 </LinearLayout>

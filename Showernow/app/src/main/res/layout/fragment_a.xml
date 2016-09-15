@@ -5,33 +5,55 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_header_selector">
 
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1"
-        android:layout_marginBottom="-10dp"
-        android:gravity="bottom">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-
-
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:text="Next"
-            style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/nextPage_a"
-            android:textSize="22sp"
-            android:backgroundTint="#4a81ff"
-            android:layout_marginTop="8dp"
-            android:textColor="#ffffff"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"/>
-            <!--
-            android:layout_gravity="bottom|right"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/textView"-->
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_marginBottom="-10dp"
+            android:gravity="bottom">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="217dp"
+                android:textSize="32sp"
+                android:text="Help us calculate when you should shower by entering your gender, weight and age."
+                android:id="@+id/textView5"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_marginBottom="-10dp"
+            android:gravity="bottom">
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Next"
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/nextPage_a"
+                android:textSize="22sp"
+                android:backgroundTint="#4a81ff"
+                android:layout_marginTop="8dp"
+                android:textColor="#ffffff"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+                <!--
+                android:layout_gravity="bottom|right"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView"-->
+        </LinearLayout>
+    </FrameLayout>
 </LinearLayout>

@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by akashshrivastava on 31/07/16.
@@ -18,6 +20,9 @@ public class fragment_C extends Fragment implements View.OnClickListener {
 
     Button nextButton;
     Button previousButton;
+    EditText weight;
+    EditText height;
+    EditText age;
 
     @Nullable
     @Override
@@ -37,10 +42,22 @@ public class fragment_C extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         if(view.getId() == R.id.nextPage_c) {
-            Log.d("ONCLICK","START SOOON");
-            Intent i = new Intent(getActivity(), ShowerActivity.class);
-            startActivity(i);
-            Log.d("ONCLICK","START SHOWER");
+
+            //int weightInt = Integer.parseInt(weight.getText().toString());
+            weight = (EditText)getView().findViewById(R.id.input_weight);
+            height = (EditText)getView().findViewById(R.id.input_height);
+            age = (EditText)getView().findViewById(R.id.input_age);
+            if (weight.getText().toString().matches("")) {
+                Toast.makeText(getActivity(), "Enter your weight in kg", Toast.LENGTH_LONG).show();
+            }else if(height.getText().toString().matches("")){
+                Toast.makeText(getActivity(), "Enter your height in cm", Toast.LENGTH_LONG).show();
+            }else if(age.getText().toString().matches("")) {
+                Toast.makeText(getActivity(), "Enter your age", Toast.LENGTH_LONG).show();
+            }else{
+                Intent i = new Intent(getActivity(), ShowerActivity.class);
+                startActivity(i);
+            }
+
         }else if(view.getId() == R.id.previousPage_c){
             ((MainActivity) getActivity()).setPreviousPage();
         }
